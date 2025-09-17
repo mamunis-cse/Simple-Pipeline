@@ -10,23 +10,38 @@ HTML = """
     <title>🚀 CI/CD with Docker</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
             color: #fff;
         }
         h1 {
-            font-size: 4em; /* Bigger title */
+            font-size: 5em;
+            margin: 0.2em 0;
             background: linear-gradient(90deg, #f12711, #f5af19);
-            padding: 40px 60px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             animation: glow 2s ease-in-out infinite alternate, fadeIn 2s ease-in-out;
-            text-align: center;
+        }
+        h2 {
+            font-size: 3em;
+            margin: 0.2em 0;
+            color: #00f0ff;
+            animation: fadeIn 3s ease-in-out;
+        }
+        h3 {
+            font-size: 2em;
+            margin: 0.2em 0;
+            color: #ff69b4;
+            animation: fadeIn 4s ease-in-out;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-30px); }
@@ -39,7 +54,13 @@ HTML = """
     </style>
 </head>
 <body>
-    <h1>🚀 CI/CD with Docker 🎉</h1>
+    <div class="container">
+        <h1>🚀 CI/CD</h1>
+        <h2>with Docker</h2>
+        <h3>Automate, Build, Deploy, Repeat!</h3>
+        <h3>Containerized & Ready for Lab</h3>
+        <h3>Flask + Docker + GitHub Actions</h3>
+    </div>
 </body>
 </html>
 """
@@ -50,5 +71,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
-
-
